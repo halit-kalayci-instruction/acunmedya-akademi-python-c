@@ -86,8 +86,7 @@ print(not 1==1)  #true- not => false
 #
 
 
-students = [  "Emir","Yasin","Emirhan","Barış","Zeynep", 5, True, 10.1 ,2  ]
-print(students)
+
 
 a=5
 b=a #5
@@ -95,7 +94,64 @@ b+=4 #9
 print(a) # 5
 print(b) # 9
 
+students = [  "Emir","Yasin","Emirhan","Barış","Zeynep", 5, True, 10.1 ,2  ]
 students2 = students
 students2.append("Ahmet")
 print(students)
 print(students2)
+
+# döngüler,karar blokları, fonksiyonlar
+# oop, modules, pip
+# yapay zeka için python..
+
+#döngüler
+
+# bir işlevi (fonksiyon) belirli ya da belirsiz sayıda tekrar etmek için kullanılır.
+# for - iteration,iterasyon => her bir tekrara verilen isim
+# indentation -> scopeları belirleyen boşluklar {}
+# scope -> (kapsam) bir kod bloğunun sahip olduğu kapsama alanı
+for i in range(5): #i
+    print(i)
+    print("merhaba") #main>for scope'u
+print("For bitti") #main scope'u
+
+for i in range(8,10): #i => isim benzerliği
+    print(i)
+print("***")
+for i in range(5,50,5):
+    print(i)
+
+students3 = ["Ali","Aybüke","Büşra","Deniz"]
+#print(students3[2])
+
+for student in students3:
+    print("Hesaplama yapılıyor: " + student)
+print("****")
+for student in students3:
+    if student == "Büşra":
+        continue #continue => döngüye sonraki elemandan devam et.
+    print("Hesaplama yapılıyor: " + student)
+print("****")
+for student in students3:
+    if student == "Büşra":
+        break #break => döngüyü manual olarak bitirmeyi hedefler.
+    print("Hesaplama yapılıyor: " + student)
+#
+
+# while
+# koşul ile çalışıyor.
+#while 10 == 10: # while sonsuz döngüye (infinite loop) girme riski olan bir döngüdür.
+    #print("While")
+
+x = 50
+while x < 100:
+    print(x)
+    x += 1
+#
+
+user_input = input("Lütfen bir değer giriniz, çıkmak için q tuşuna basınız.")
+
+while user_input != "q":
+    print(f"Verdiğiniz değer: {user_input}")
+    user_input = input("Lütfen bir değer giriniz, çıkmak için q tuşuna basınız.")
+
